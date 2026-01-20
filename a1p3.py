@@ -33,7 +33,7 @@
 """
 CMPUT 331 Assignment 1 Student Solution
 January 2026
-Author: <Your name here>
+Author: Louis Lam
 """
 
 
@@ -44,12 +44,47 @@ LETTERS = 'ABCDEFGHIKLMNOPQRSTUVWXYZ'
 
 
 def crack_caesar(ciphertext, val_words):
-    
-    raise NotImplementedError()
+    best_plain = None
+    best_key = None
+    best_score = -1
+
+    for key in LETTERS:
+        plain = decrypt(ciphertext, key)
+
+        score = 0
+        for token in plain.split():
+            word = []
+            for ch in token:
+                if 'A' <= ch <= 'Z':
+                    word.append(ch)
+            w = ''.join(word)
+            if w and w in val_words:
+                score += 1
+
+        if score > best_score:
+            best_score = score
+            best_plain = plain
+            best_key = key
+        elif score == best_score:
+            if best_plain is None or plain < best_plain:
+                best_plain = plain
+                best_key = key
+
+    return best_plain, best_key
 
 
 def form_dictionary(text_address='carroll-alice.txt'):
-    raise NotImplementedError()
+    with open(text_address, 'r', encoding='utf-8', errors='ignore') as f:
+        text = f.read()
+
+    cleaned = []
+    for ch in text.upper():
+        if 'A' <= ch <= 'Z':
+            cleaned.append(ch)
+        else:
+            cleaned.append(' ')
+
+    return set(''.join(cleaned).split())
 
 
 

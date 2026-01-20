@@ -33,7 +33,7 @@
 """
 CMPUT 331 Assignment 1 Student Solution
 January 2026
-Author: <Your name here>
+Author: Louis Lam
 """
 
 

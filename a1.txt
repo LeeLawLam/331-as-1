@@ -4,21 +4,21 @@ Note:
 2. Any other change in the template might result in a potential mark deduction.
 
 Original caesar cipher
-  Answer: ___ (Number)
-  Explanation: ___ (10-20 words)
+  Answer: 25 (Number)
+  Explanation: each letter defines a unique shift amount (10-20 words)
 
 Problem 1 implementation
-  Answer: ___ (Number)
-  Explanation: ___ (10-20 words)
+  Answer: 25 (Number)
+  Explanation: functionally identical to the original Caesar cipher (10-20 words)
 
 Problem 2 implementation
-  Answer: ___ (Number)
-  Explanation: ___ (10-20 words)
+  Answer: 25 (Number)
+  Explanation: only the initial key is secret; subsequent shifts are deterministic (10-20 words)
 
 4b. Is the problem 2 cipher stronger than the original Caesar cipher?
-  Answer: ___ (Yes/No)
-  Explanation: ___ (10-20 words)
+  Answer: Yes (Yes/No)
+  Explanation: it reduces frequency leakage but does not increase key space (10-20 words)
 
 4c. Will encrypting the space help address the weaknesses of the Caesar cipher?
-  Answer: ___ (Yes/No)
-  Explanation: ___ (10-20 words)
+  Answer: Yes (Yes/No)
+  Explanation: encrypting spaces hides word boundaries (10-20 words)
